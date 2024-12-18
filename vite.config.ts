@@ -1,9 +1,3 @@
-// import { defineConfig } from 'vite'
-
-// export default defineConfig({
-//   plugins: [],
-// })
-
 import { defineConfig } from 'vite';
 import vitePluginSingleSpa from 'vite-plugin-single-spa';
 
@@ -13,17 +7,17 @@ export default defineConfig({
   plugins: [
     vitePluginSingleSpa({
       type: 'root',
-      // importMaps: {
-      //   type: 'systemjs-importmap', // SystemJS import map
-      //   dev: 'src/importMap.dev.json', // Development import map
-      //   build: 'src/importMap.json', // Production import map
-      // },
-      // imo: true, // Enable import-map-overrides functionality
-      // imoUi: {
-      //   variant: 'popup', // Show as popup UI
-      //   buttonPos: 'top-right', // Position override UI at the top-right
-      //   localStorageKey: 'my-custom-imo-ui-key', // Optional: Custom key for toggling the UI
-      // },
+      importMaps: {
+        type: 'overridable-importmap', // SystemJS import map
+        dev: 'src/importMap.dev.json', // Development import map
+        build: 'src/importMap.json', // Production import map
+      },
+      imo: true, // Enable import-map-overrides functionality
+      imoUi: {
+        variant: 'popup', // Show as popup UI
+        buttonPos: 'top-right', // Position override UI at the top-right
+        localStorageKey: 'my-custom-imo-ui-key', // Optional: Custom key for toggling the UI
+      },
     }),
   ],
   server: {

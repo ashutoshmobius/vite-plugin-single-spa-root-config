@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Root Config</title>
+    <title>Root Config</title> -->
 
     <!-- SystemJS Loader -->
-    <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.min.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/amd.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/systemjs/dist/extras/named-exports.min.js"></script> -->
 
     <!-- Import-Map-Overrides UI (Load Only Once) -->
@@ -15,16 +15,35 @@
     <!-- <script src="https://cdn.jsdelivr.net/npm/import-map-overrides@latest/dist/import-map-overrides.js"></script> -->
 
      <!-- Root Config Entry Point -->
-     <script type="module">
+     <!-- <script type="module">
       System.import('/src/main.ts').catch((err) =>
         console.error('Error loading root-config:', err)
       );
     </script>
+     -->
+    <!-- ESM -->
+    <!-- <script type="module" src="./src/main.ts"></script>
     
   </head>
   <body>
     <div id="single-spa-root"></div>
     <div id="root"></div>
 
+  </body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Root Config</title>
+    <!-- Use ESM -->
+    <script type="module" src="./src/main.ts"></script>
+  </head>
+  <body>
+    <div id="single-spa-root"></div>
+    <div id="root"></div>
   </body>
 </html>

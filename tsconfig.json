@@ -21,5 +21,5 @@
     "noFallthroughCasesInSwitch": true,
     "noUncheckedSideEffectImports": true
   },
-  "include": ["src", "../svelte-mfe/src/lib"]
+  "include": ["src", "src/**/*.ts", "src/**/*.js", "src/*.d.ts"]
 }
