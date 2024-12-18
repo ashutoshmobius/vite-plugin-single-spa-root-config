@@ -1,0 +1,5 @@
+{
+    "imports": {
+        "@svelte-mfe": "http://localhost:5001/spa.js"
+    }
+}
