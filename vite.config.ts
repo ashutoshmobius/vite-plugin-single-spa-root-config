@@ -8,7 +8,7 @@ export default defineConfig({
     vitePluginSingleSpa({
       type: 'root',
       importMaps: {
-        type: 'overridable-importmap', // SystemJS import map
+        type: 'importmap', // SystemJS import map
         dev: 'src/importMap.dev.json', // Development import map
         build: 'src/importMap.json', // Production import map
       },
